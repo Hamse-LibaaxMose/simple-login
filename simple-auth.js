@@ -11,6 +11,11 @@ function initAuth() {
 function userIsSignedIn() {
     location.hash = "#home";
     document.querySelector("nav").classList.remove("hide");
+    displayUserInfo();
+}
+
+function displayUserInfo() {
+    document.querySelector("#profile .mail").textContent = localStorage.getItem("authUser");
 }
 
 function userIsSignedOut() {
