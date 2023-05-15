@@ -20,6 +20,10 @@ html {
     background-color: var(--light-green);
 }
 
+a {
+    color: var(--green);
+}
+
 /* ---------- nav styling ---------- */
 nav {
     display: grid;
@@ -29,6 +33,7 @@ nav {
     left: 0;
     right: 0;
     text-align: center;
+    animation: fadeIn 0.4s;
 }
 
 @media (min-width: 600px) {
@@ -62,9 +67,14 @@ nav a.active {
     color: var(--green);
 }
 
+nav.hide {
+    display: none;
+}
+
 .view-content {
     display: none;
     padding: 248px 2em;
+    animation: fadeIn 0.4s;
 }
 
 @media (min-width: 600px) {
@@ -75,4 +85,60 @@ nav a.active {
 
 .view-content.active {
     display: block;
+}
+
+/* ---------- form styling ---------- */
+/* input form styling */
+form {
+    margin: 2em auto 0;
+    background-color: var(--light-green);
+    padding: 1em 1em 2em;
+    text-align: center;
+}
+
+button {
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid var(--green);
+    color: var(--text-color-light);
+    background-color: var(--green);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    width: 100%;
+    max-width: 380px;
+}
+
+input {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    border: 2px solid var(--green);
+    display: block;
+    background: var(--white);
+}
+
+/* ---------- login styling ---------- */
+#signin-message {
+    color: var(--text-color-danger);
+}
+
+#signin,
+#signup {
+    text-align: center;
+}
+
+/* ---------- animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
